@@ -4,7 +4,7 @@ def ContinueShopping():
     History = []
     Loop = True
     while Loop:
-        KeepShopping = input("Do you want to buy something? (yes/no): ")
+        KeepShopping = input("Do you want to buy something? (yes/no): ").strip().lower()
         if KeepShopping == "yes":
             ProductData = SalesRegistration()
             History.append(ProductData)
@@ -21,3 +21,4 @@ def ContinueShopping():
             Loop = False
         else:
             print("ERROR!!! Only enter yes or no")
+            
