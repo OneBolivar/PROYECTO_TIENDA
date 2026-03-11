@@ -8,7 +8,8 @@ This program helps you register products interactively. You can enter the produc
 
 ## Project Structure
 
-The code is organized into three main files:
+The code is organized into three main files: 
+
 
 - **main.py**: Entry point that initializes the program
 - **SalesRegistration.py**: Handles individual product registration with validation
@@ -126,3 +127,6 @@ Thank you for your purchase, come back soon
 - Stores data in tuples and lists for efficient management
 - Case-insensitive input handling (`.lower()` method)
 - String formatting for clean console output
+
+
+

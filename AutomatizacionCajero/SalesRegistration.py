@@ -11,3 +11,4 @@ def SalesRegistration():
             return (ProductName, ProductPrice, ProductQuantity, Total)
         except ValueError:       
             print("ERROR! You must enter a number. Try again.")
+            
