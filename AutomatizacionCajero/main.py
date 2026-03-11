@@ -1,2 +1,2 @@
-from SeguirComprando import SeguirComprando
-SeguirComprando()
+from ContinueShopping import ContinueShopping
+ContinueShopping()
