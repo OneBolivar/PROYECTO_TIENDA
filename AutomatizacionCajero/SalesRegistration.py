@@ -1,28 +1,30 @@
 def SalesRegistration():
-    VALIDATOR = True
-    while VALIDATOR:  
+    VALIDATOR_NAME = True
+    while VALIDATOR_NAME:
+        product_name = input("Enter the product name: ").strip()
+        if product_name == "":
+            print("ERROR! Name cannot be empty.")
+        else:
+            VALIDATOR_NAME = False 
+    VALIDATOR_PRICE = True
+    while VALIDATOR_PRICE:
         try:
-            ProductName = input("Enter the product name: ")
-            if ProductName.strip()=="":
-                int("Error: Empty Name")
+            product_price = float(input("Enter the product price: "))
+            if product_price < 0:
+                int("Force Error") 
             else:
-                try:
-                    ProductPrice = float(input("Enter the product price: "))
-                    
-                    if ProductPrice < 0:
-                        # Forzamos un error de valor convirtiendo algo que no es número
-                        int("Error: Negative") 
-                    else:
-                        ProductQuantity = int(input("How many products do you want to buy?: "))
-                        
-                        if ProductQuantity < 0:
-                            int("Error: Negative Quantity")
-                        else:
-
-                            Total = ProductPrice * ProductQuantity  
-                            VALIDATOR = False
-                            return (ProductName, ProductPrice, ProductQuantity, Total)
-                except ValueError:
-                    print("ERROR! Invalid input (it must be a positive number). Try again.")
+                VALIDATOR_PRICE = False 
         except ValueError:
-            print("ERROR! Invalid input (it must be a positive number). Try again.")
+            print("ERROR! Invalid price (must be a positive number). Try again.")
+    VALIDATOR_QUANTITY = True
+    while VALIDATOR_QUANTITY:
+        try:
+            product_quantity = int(input("How many products do you want to buy?: "))
+            if product_quantity < 0:
+                int("Force Error")
+            else:
+                VALIDATOR_QUANTITY = False 
+        except ValueError:
+            print("ERROR! Invalid quantity (must be a positive integer). Try again.")
+    total = product_price * product_quantity
+    return (product_name, product_price, product_quantity, total)
