@@ -1,0 +1,68 @@
+-----------------------------------------------------------------------------------------------------------------------------
+HTML
+    Estructura Base
+        <!DOCTYPE html>: Declara que el documento es HTML5.
+        <html>: Etiqueta raíz del documento.
+        <head>: Contiene metadatos, título y enlaces a estilos.
+        <body>: Contiene todo el contenido visible de la web. 
+
+    Contenido de Texto
+        <h1> a <h6>: Títulos y encabezados jerárquicos (H1 es el más importante).
+        <p>: Define un párrafo de texto.
+        <a>: Crea enlaces (requiere atributo href).
+        <strong> / <b>: Texto resaltado o en negrita.
+        <br>: Salto de línea sencillo. 
+
+    Multimedia y Listas
+        <img>: Inserta imágenes (requiere src y alt).
+        <ul> / <ol>: Listas desordenadas (viñetas) y ordenadas (números).
+        <li>: Cada elemento individual dentro de una lista. 
+
+    Contenedores y Semántica
+        <div>: Contenedor genérico en bloque.
+        <span>: Contenedor genérico de línea para pequeñas secciones de texto.
+        <header>, <nav>, <main>, <footer>: Etiquetas semánticas para definir partes de la web. 
+
+-----------------------------------------------------------------------------------------------------------------------------
+Propiedades y Estilos CSS
+    Texto y Tipografía
+        color: Cambia el color del texto.
+        font-family: Define la familia de la fuente.
+        font-size: Define el tamaño de la letra (en px, em, rem).
+        text-align: Alineación del texto (left, center, right, justify).
+
+    Modelo de Caja (Box Model)
+        width / height: Define ancho y alto de un elemento.
+        margin: Espacio exterior alrededor del elemento.
+        padding: Espacio interior entre el contenido y el borde.
+        border: Define el grosor, estilo y color del borde.
+
+    Fondo y Posicionamiento
+        background-color: Define el color de fondo.
+        display: Controla cómo se visualiza el elemento (block, inline, flex, grid).
+        position: Define el tipo de posicionamiento (static, relative, absolute, fixed).     
+
+    Selectores y Estados
+        .clase: Selecciona elementos con un atributo class.
+        #id: Selecciona un elemento específico con un id.
+        :hover: Estilo que se aplica cuando el cursor pasa por encima.        
+
+    Layout con Flexbox (1D - Filas o Columnas) 
+        Se activa en el contenedor padre con display: flex;   
+            flex-direction: Define la dirección de los elementos (row horizontal, column vertical).
+            justify-content: Alinea los elementos en el eje principal (si es fila, los mueve horizontalmente):
+            flex-start / center / flex-end: Inicio, centro o fin.
+            space-between: Espacio máximo entre elementos (extremos pegados a los bordes).
+            space-around: Espacio equitativo alrededor de cada elemento.
+            space-evenly: Espacio idéntico entre elementos y bordes.
+            align-items: Alinea los elementos en el eje cruzado (perpendicular al principal).
+            stretch (por defecto), center, flex-start, flex-end, baseline.
+            gap: Define el espacio exacto entre los elementos sin usar márgenes. 
+
+SASS: 
+sass --watch assets/sass/styles.scss assets/css/style.css
+
+PSEUDO ELEMNTOS Y PSEUDO CLASES
+Pseudo clase = Modifica el estado
+Pseudo Elemento = Modifica el contenido
+nth-child(#) = Esto funciona como el first-child, el "#" es el numero (o la posicion) de lo que queremos modificar

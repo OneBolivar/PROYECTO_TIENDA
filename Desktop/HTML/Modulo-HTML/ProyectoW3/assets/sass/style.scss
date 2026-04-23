@@ -1,0 +1,141 @@
+* {
+    margin: 10;
+    padding: 0;
+    margin-right: 10;
+}
+body {
+    background-color: gray;
+    font-family: monospace;
+    header {
+        /*Aqui se modifica el boton, se coloca display none para que no se vea en pantalla grande*/
+        .boton-menu {
+            display: none;
+            background-color: gray;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: purple;
+            }
+        }
+
+        /*Condicional del media query, si es menor a 597 px entonces se hara la condicion puesta*/
+        @media (max-width: 597px), (min-width: 597px) and (max-width: 991.98px) {
+            .boton-menu {
+                display: block;
+
+
+            }
+
+            nav {
+                /*Propiedades exclusivas para el menu hamburguesa*/
+                top: 100px;
+                right: 20px;
+                position: absolute;
+                background-color: rgb(109, 25, 148);
+                display: none;
+
+                /*Aqui se activa (o sea propiedades especificas)*/
+                &.active {
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        color: white;
+                    }
+                }
+            }
+
+        }
+        
+        /*Aqui se editan los links para pantallas grandes*/
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+            margin-left: 7%;
+            /*Esto es para el titulo (Portafolio)*/
+        }
+
+    }
+/*------------------------------------------------------------*/
+    .Seccion1 {
+
+        h2 {
+            text-align: center;
+        }
+
+        .Subtitulo {
+            text-align: center;
+        }
+
+        div img {
+            display: grid;
+            width: 100%;
+
+
+        }
+    }
+/*-------------------------------------------------------------*/
+    .Seccion2 {
+        div {
+            display: grid;
+            text-align: center;
+            grid-template-columns: repeat(3, 1fr);
+            margin-right: -10;
+            
+        }
+
+    }
+/*---------------------------------------------------------------*/
+    footer {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        margin: -10px;
+
+        .LogoFooter {
+            img {
+                height: 35px;
+                width: 35px;
+            }
+        }
+
+
+    }
+    /*---- media queries ----*/
+    /*Media query para pantallas pequeñas*/
+    @media (max-width:597px) {
+        .Seccion2 {
+            div {
+                background-color: white;
+               display: flex;
+               flex-direction: column;
+               a{
+                color: black;
+               }
+            }
+        }
+    }
+    /*Media query para tablets*/
+    @media (min-width:597px) and  (max-width: 1280px) {
+        .Seccion2 {
+            div {
+                background-color: white;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+               a{
+                color: black;
+               }
+            }
+        }
+    }    
+}
+
+

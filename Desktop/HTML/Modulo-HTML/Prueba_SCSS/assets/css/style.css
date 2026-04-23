@@ -1,0 +1,11 @@
+header h1 {
+  color: white;
+  background-color: purple; }
+header h2 {
+  color: white;
+  background-color: green;
+  text-align: center; }
+header nav {
+  background-color: red; }
+
+/*# sourceMappingURL=style.css.map */

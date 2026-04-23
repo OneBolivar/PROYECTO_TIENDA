@@ -1,0 +1,157 @@
+/*Variables generales*/
+$Color_Fondo: #333;
+$Color_Div_Juegos: rgb(104, 11, 163);
+/*Aqui se edita las configuraciones generales*/
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body{
+    /*Aqui se edita todo el header*/
+    header{
+        /*Logo del NAV*/
+        div img {
+        height: 35px;
+        width: 35px;
+        }
+        /*Aqui se editan los links*/
+        div {
+            display: flex;
+            gap: 20px;
+            
+        }
+        /*Se edita los a de el link*/
+        div a{
+            color: white;
+        }
+        /*Barra de navegacion*/
+        nav{
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;          
+        padding: 10px 20px; /*Margenes de la navbar (10px --> Arriba/Abajo) (20px --> Derecha/Izquierda)*/
+        margin: -10px;
+        background-color: $Color_Fondo;        
+        color: white;
+        }
+
+    }
+
+    /*Aqui se modifica la parte 1 de el codigo*/
+    .Parte1{
+        color: rgb(104, 11, 163);
+        font-size: 40px;
+        text-align: center;
+        margin: -54px;
+        p{
+            color: black;
+        }
+    }
+
+    /*Aqui se modifica el contenedor principal*/
+    .Contenedor_Principal{
+        display: grid; /*Convierte el contenedor en una cuadricula, haciendo que los elementos se aomoden en filas y columnas*/
+        grid-template-columns: 35% 1fr; /* Divide en 2 columnas: la 1ra ocupa el 35% y la 2da el resto (1fr) */
+        gap: 20px; 
+        padding: 20px;
+        
+    }
+    /*Aqui se modifica la imagen principal 1*/
+    .Imagen1{
+        display: grid; /*Sirve para modificar la informacion en filas y columnas*/
+        grid-template-rows: auto auto; /* Sirve para establecer cuántas filas tendrá tu diseño y qué altura tendrá cada una.*/
+        gap: 10px;
+    }
+
+    /*Aqui se modifica las imagenes secundarias*/
+    .Imagenes_Secundarias1{
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos fotos pequeñas abajo */
+        gap: 10px;
+
+    }
+    
+    /*NO TOCAR (Aqui se modifican las imagenes para que tengan el tamaño y la forma adecuados*/
+    img {
+    /* Hace que la imagen ocupe todo el ancho disponible de su contenedor */
+    width: 100%;
+
+    /* Mantiene la proporción original para que la imagen no se vea estirada */
+    height: 305px;
+
+    /* Redondea las esquinas de la imagen (8 píxeles de curvatura) */
+    border-radius: 8px; 
+
+    /* Recorta la imagen para que rellene el espacio asignado sin deformarse */
+    object-fit: cover;
+    }
+
+    /*Aqui se modifica el contenedor secundario*/
+    .Contenedor_Secundario{
+        display: grid;
+        
+        grid-template-columns: 35% 1fr; /* Divide en 2 columnas: la 1ra ocupa el 35% y la 2da el resto (1 fraccion(Unidad de medida flexible) */
+        gap: 20px; 
+        padding: 20px;
+    
+    }
+
+    /*Aqui se modifica el tercer contenedor */
+    .Contenedor_Terciario{
+        text-align: center;
+    }
+    /*Aqui se edita el cuarto contenedor en general*/
+    .Cuarto_Contenedor{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 1890px;
+        background-color: white;
+        color: black;
+    /*Aqui se edita los div (mini contenedores) para los logos*/
+        div{
+        border-radius: 50%  ;
+        display: inline-block;
+        max-width: 550px;
+        
+    /*Aqui se edita el tamaño de las imagenes (logos)*/
+        img{
+            height: 50px;
+            width: 100px;            
+        }            
+        }
+        
+    }
+    .Cuarto_Contenedor div{
+        border-radius: 50% / 40% ;
+        display: inline-block;
+        max-width: 550px;
+        background-color:$Color_Div_Juegos;
+        color: white;
+
+    }
+    /*Aqui se editan los logos*/
+    .Cuarto_Contenedor div img{
+        height: 50px;
+        width: 100px;
+    }
+    /*Aqui se edita el footer*/
+    footer{
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;          
+        padding: 10px 20px; /*Margenes de la navbar (10px --> Arriba/Abajo) (20px --> Derecha/Izquierda)*/
+        margin: -10px;
+        background-color: $Color_Fondo;        
+        color: white;        
+    }   
+    footer div img{
+        height: 35px;
+        width: 35px;
+    }    
+    
+
+}
+
+
+/**/

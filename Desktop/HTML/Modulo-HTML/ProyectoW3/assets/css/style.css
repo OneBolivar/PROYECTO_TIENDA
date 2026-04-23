@@ -1,0 +1,88 @@
+@charset "UTF-8";
+* {
+  margin: 10;
+  padding: 0;
+  margin-right: 10; }
+
+body {
+  background-color: gray;
+  font-family: monospace;
+  /*------------------------------------------------------------*/
+  /*-------------------------------------------------------------*/
+  /*---------------------------------------------------------------*/
+  /*---- media queries ----*/
+  /*Media query para pantallas pequeñas*/
+  /*Media query para tablets*/ }
+  body header {
+    /*Aqui se modifica el boton, se coloca display none para que no se vea en pantalla grande*/
+    /*Condicional del media query, si es menor a 597 px entonces se hara la condicion puesta*/
+    /*Aqui se editan los links para pantallas grandes*/
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    body header .boton-menu {
+      display: none;
+      background-color: gray;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease; }
+      body header .boton-menu:hover {
+        background-color: purple; }
+    @media (max-width: 597px), (min-width: 597px) and (max-width: 991.98px) {
+      body header .boton-menu {
+        display: block; }
+      body header nav {
+        /*Propiedades exclusivas para el menu hamburguesa*/
+        top: 100px;
+        right: 20px;
+        position: absolute;
+        background-color: #6d1994;
+        display: none;
+        /*Aqui se activa (o sea propiedades especificas)*/ }
+        body header nav.active {
+          display: flex;
+          flex-direction: column; }
+          body header nav.active a {
+            color: white; } }
+    body header h1 {
+      margin-left: 7%;
+      /*Esto es para el titulo (Portafolio)*/ }
+  body .Seccion1 h2 {
+    text-align: center; }
+  body .Seccion1 .Subtitulo {
+    text-align: center; }
+  body .Seccion1 div img {
+    display: grid;
+    width: 100%; }
+  body .Seccion2 div {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    margin-right: -10; }
+  body footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: -10px; }
+    body footer .LogoFooter img {
+      height: 35px;
+      width: 35px; }
+  @media (max-width: 597px) {
+    body .Seccion2 div {
+      background-color: white;
+      display: flex;
+      flex-direction: column; }
+      body .Seccion2 div a {
+        color: black; } }
+  @media (min-width: 597px) and (max-width: 1280px) {
+    body .Seccion2 div {
+      background-color: white;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); }
+      body .Seccion2 div a {
+        color: black; } }
+
+/*# sourceMappingURL=style.css.map */

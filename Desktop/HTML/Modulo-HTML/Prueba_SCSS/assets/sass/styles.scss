@@ -1,0 +1,20 @@
+$color_general : white;
+header{
+    h1{
+        color: $color_general;
+        background-color: purple;
+    }
+    h2{
+    color : $color_general;
+    background-color: green;
+    text-align: center;
+    }
+    nav{
+        background-color: red;
+
+    }
+}
+
+aside{
+
+}
